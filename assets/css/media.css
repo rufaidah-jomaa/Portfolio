@@ -1,0 +1,32 @@
+@media (max-width:991px){
+.nav-item{
+    width: fit-content;
+}
+}
+
+@media (max-width:568px){
+    .header{
+        background-position-x:-235px ;
+    }
+    .header-content{
+        align-items: start !important;
+    }
+    h1{
+        font-size: 45px!important;
+    }
+    .contact p, .contact form{
+        width: 100% !important;
+    }
+}
+@media (max-width:768px){
+    .about .count{
+        border: none !important;
+    }
+    .download-cv .brands{
+        justify-content: center !important;
+    }
+    .download-cv .download{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    }
