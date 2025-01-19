@@ -5,15 +5,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="vendor/fontawsome/all.min.css">
-  <link rel="stylesheet" href="vendor/bootsrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootsrap/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/media.css">
-  <title>Bootstrap demo</title>
+  <title>portfolio</title>
 </head>
 
 <body>
+  <!--loading-->
+  <div class="loading bg-white position-fixed vh-100 w-100 d-flex justify-content-center align-items-center z-3">
+    <span class="loader"></span>
+  </div>
+  <!--scroll-to-top-->
+  <div class="scroll-to-top position-fixed bg-main-color text-white rounded-circle d-flex align-items-center justify-content-center ">
+    <i class="fa-solid fa-arrow-up"></i>
+  </div>
   <!--Navbar-->
-  <nav class="navbar navbar-expand-lg  fixed-top">
+  <nav class="navbar navbar-expand-lg  fixed-top z-2">
     <div class="container">
       <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt="logo" /></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -23,7 +31,7 @@
       <div class="collapse navbar-collapse  " id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
           <li class="nav-item me-3">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#header-content">Home</a>
           </li>
           <li class="nav-item me-3">
             <a class="nav-link" href="#services">Service</a>
@@ -48,7 +56,7 @@
     </div>
   </nav>
   <!--header-->
-  <section class="header vh-100">
+  <section class="header vh-100" id="header-content">
     <div class="container">
       <div class="header-content d-flex flex-column justify-content-center align-items-end  vh-100">
         <span class="fw-bold">Hello I’m</span>
@@ -115,7 +123,7 @@
   </section>
 
   <!-- services section -->
-  <section class="services py-5" id="sevices">
+  <section class="services py-5" id="services">
     <div class="container">
       <div class="title  d-flex justify-content-center">
         <div>
@@ -164,7 +172,7 @@
   </section>
 
   <!--portfolio section-->
-  <section class="portfolio py-5" id="portfolio ">
+  <section class="portfolio py-5" id="portfolio">
     <div class="container ">
       <div class="title  d-flex justify-content-center ">
         <div>
@@ -955,10 +963,9 @@
       </div>
     </div>
   </div>
-</section>
-           
-      
+</section>      
   <script src="vendor/bootsrap/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>

@@ -11,6 +11,7 @@
 }
 body{
   font-family: 'Roboto',sans-serif;
+  overflow: hidden;/*عشان تختفي السكرول في البداية لما يعمل لودنج*/
 }
 .bg-main-color {
   background-color: var(--mainColor);
@@ -27,6 +28,75 @@ body{
     max-width: 1140px;
   }
 }
+/*loading*/
+.loading{
+  transition: 0.5s;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color:var(--mainColor) var(--mainColor) transparent transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after,
+.loader::before {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent transparent var(--mainColor) var(--mainColor);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+.loader::before {
+  width: 32px;
+  height: 32px;
+  border-color:var(--mainColor) var(--mainColor) transparent transparent;
+  animation: rotation 1.5s linear infinite;
+}
+    
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+/*scroll-to-top*/
+.scroll-to-top{
+  width:40px;
+  height:40px; 
+  cursor:pointer; 
+  right:20px;
+  bottom:20px;  
+  visibility:hidden; 
+  
+}
+
+/*navbar*/
 .buttn i {
   transition: 1s;
 }
@@ -35,6 +105,9 @@ body{
   transform: rotate(360deg);
   color: #fff !important;
   background-color: black !important;
+}
+.navbar{
+  transition: background-color 2s;
 }
 .nav-item {
   position: relative;
@@ -148,7 +221,7 @@ body{
     width: 0;
   }
   to{
-    width: 345px;
+    width: 355px;
   }
 }
 @keyframes blink {
@@ -537,3 +610,4 @@ color: rgb(33, 37, 41)!important;
 .footer span{
   font-weight: 700;
 }
+
